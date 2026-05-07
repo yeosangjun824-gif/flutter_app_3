@@ -13,14 +13,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("레이아웃 예제"),),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: const [
-              Icon(Icons.star),
-              Icon(Icons.favorite),
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children:  [
+              Expanded(
+                flex: 3,
+                gchild: Container(color:Colors.lightBlue),
+              ),
+              Expanded(
+                flex:1,
+                child: Container(
+                    color:Colors.white,
+                    child: Container(
+                      width:30,
+                      color: Colors.amber[100],
+                      child:Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+
+                        children: const [
+                          Icon(Icons.settings, color: Colors.blue),
+                          Icon(Icons.person, color: Colors.deepOrange)
+                        ],
+
+                      )
+                    )),
+
+              ),
+
             ]
           ),
         ),
