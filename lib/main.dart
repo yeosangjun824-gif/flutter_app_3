@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             children:  [
               Expanded(
                 flex: 3,
-                gchild: Container(color:Colors.lightBlue),
+                child: Container(color:Colors.lightBlue),
               ),
               Expanded(
                 flex:1,
